@@ -1,7 +1,7 @@
 # Getting Started with the Snappers SDK for iOS
 
 ## Step 1: Instalation
-We currently supports only Swift projects
+We currently support only Swift projects
 
 ### CocoPods
 Add this to your Podfile 
@@ -23,9 +23,9 @@ from the terminal in your project directory type
 ```
 
 ## Step 2: Configure App Settings
-1. In Xcode, from target’s Build Settings tab, set “Enable Bitcode” option to ​ **NO.**
-2. from target’s Capabilities tab, enable Push Notifications.
-3. from target’s Capabilities tab, under Background modes, enable Location updates and Remote notifications.
+1. In Xcode, from the target’s Build Settings tab, set “Enable Bitcode” option to ​ **NO.**
+2. In the target’s Capabilities tab, enable Push Notifications.
+3. In the target’s Capabilities tab, under Background modes, enable Location updates and Remote notifications.
 
 ## Step 3: Configure permissions by adding the following into your info.plist file
 In the Project Navigator, right click on Info.plist, and choose "Open as" → "Source Code"
@@ -50,7 +50,7 @@ Paste the following snippet into your existing plist.
 <string>We require access to your photo library to allow you to upload prerecorded videos</string>   
 ```
 
-## Step 4: If you plan using Snapper's Facebook or Twitter authentication, add the folowing to your info.plist file 
+## Step 4: If you plan on using Snappers' Facebook or Twitter authentication, add the folowing to your info.plist file 
 In the Project Navigator, right click on Info.plist, and click "Open as" → "Source Code"
 Paste the following snippet into your existing plist.
 ```xml   
@@ -99,7 +99,7 @@ SnappersSDK.shared.present(.mapView, style:.popup) { error in
 ```
 
 ## Step 6: Test event invitation notification:
-Once Snappers initialized succsefully, you can mockup a broadcase invitation notification
+Once Snappers initialized succsefully, you can mockup a broadcast invitation notification *this is for testing purposes only*
 
 Swift:
 ```swift
@@ -122,31 +122,13 @@ Swift:
 
 ```swift
 	// @discussion Presents Snappers view
-	// @param view  available options: .mapView
-	// @param style available options .fullscreen and .popup
+	// @param view currently only suporting .mapView
+	// @param style presnetation style available .fullscreen and .popup
 	// @param callback(error) finished callback
 
 	  func present(_ screen:SnappersView, style:SnappersPresentationStyle = .fullscreen, _ callback:SnappersCallback?  = nil)
 
 ```
-
-```swift
-	// @discussion Login via social networks
-	// @param view  available options: .facebook and .twitter
-	// @param callback(error) finished callback
-	 func login( method:SnappersLoginMethod, _ callback:SnappersCallback? = nil)
-	
-```
-
-```swift
-	// @discussion Logout
-	// @param callback(error) finished callback
-	  func logout( _ callback:SnappersCallback? = nil) 
-	
-```
-
-
-
 
 
 
